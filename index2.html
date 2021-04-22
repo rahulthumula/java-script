@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function Submit()
+            {
+                var x=document.getElementById("2").value;
+                var y=document.getElementById("1").value;
+                var z=document.getElementById("3").value;
+               
+
+
+                if( x==""||y==""||z=="")
+                {
+                    alert("Field cannot be empty");
+                }
+               else if(x.length<6)
+               {
+                   alert("Min char should 6");
+               }
+                
+            }
+            function fun()
+            {
+                var a=parseInt(document.getElementById("4").value);
+                var b=parseInt(document.getElementById("5").value);
+                var c=document.getElementById("operators").value;
+                if(c ===  '+')
+                {
+                    var res=a+b;
+                    document.getElementById("6").value = res;
+                }
+                else if(c  === '-')
+                {
+                    var res=a-b;
+                    document.getElementById("6").value = res;
+                }
+               else if(c ==="*")
+                {
+                    var res=a*b;
+                    document.getElementById("6").value = res;
+                }
+               else if(c  === "/")
+                {
+                    var res=a/b;
+                    document.getElementById("6").value = res;
+                }
+
+            }
+
+
+
+    </script>
+    </head>
+    <body>
+        <form   onSubmit="Submit();">
+            Name:<input type="text" id="1"><br/>
+            Password:<input type="password" id="2"><br/>
+            email:<input type="email" id ="3"><br/>
+            <input type="submit" value="Submit">
+        </form>
+    
+            N1:<input type="number" id="4"><br/>
+           <select  id="operators">
+               <option value="+">+</option>
+               <option value="-" >-</option>
+               <option value="*">*</option>
+               <option value="/">/</option>
+           </select><br/>
+            n2:<input type="number" id ="5"><br/>
+            <button onclick="fun();">submit</button><br/>
+
+            result:<input type="number" id="6">
+            
+    
+
+    </body>
+</html>
