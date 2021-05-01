@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script>
+   var Marvel = [
+{ id: 1, name: 'Spiderman' },
+{ id: 2, name: 'Cap' },
+{ id: 3, name: 'Ironman' },
+{ id: 4, name: 'Wanda' }
+];
+//foreach
+var marvelid = [];
+Marvel.forEach(function (M) {
+marvelid .push(M.id);
+});
+
+//Map
+var marvelid = Marvel.map(function (m) {
+return m.id
+});
+//Reduce
+const total = Marvel.reduce((acc, y) => acc + y.id, 0);
+//Filter
+var z = Marvel.filter(function (z) {
+return z.name === "Cap";
+});
+   </script>
+</head>
+<body>
+    
+</body>
+</html>
